@@ -1,0 +1,24 @@
+$gunmetal: hsla(210, 34%, 16%, 1);
+$lapis-lazuli: hsla(208, 43%, 36%, 1);
+$blue-munsell: hsla(188, 74%, 38%, 1);
+$middle-blue: hsla(187, 39%, 63%, 1);
+$alice-blue: hsla(200, 22%, 92%, 1);
+$cultured: hsla(180, 9%, 98%, 1);
+$light-coral: hsla(0, 82%, 70%, 1);
+$mellow-apricot: hsla(27, 97%, 74%, 1);
+
+$black: $gunmetal;
+$dgray: $lapis-lazuli;
+$gray: hsla(208, 30%, 50%, 1);
+$lgray: hsla(200, 22%, 80%, 1);
+$llgray: hsla(200, 22%, 92%, 1);
+$white: $cultured;
+
+/* aliases */
+$text: $black;
+$text-light: $dgray;
+$primary: $light-coral;
+$secondary: $mellow-apricot;
+$clickable: $lapis-lazuli;
+$clickable-hover: lighten($lapis-lazuli, 20%);
+$clickable-visited: lighten(desaturate($lapis-lazuli, 36%), 16%);

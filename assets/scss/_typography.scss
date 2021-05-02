@@ -1,0 +1,65 @@
+body {
+  background-color: white;
+  font-family: $serif;
+  font-weight: 400;
+  line-height: 1.65;
+  color: $text;
+}
+
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: $sans, sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.488em;
+}
+
+h2 {font-size: 2.074em;}
+
+h3 {font-size: 1.728em;}
+
+h4 {font-size: 1.44em;}
+
+h5 {font-size: 1.2em;}
+
+small, .text_small {font-size: 0.833em;}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 4px solid $primary;
+}
+
+a {
+  color: $clickable;
+  &:visited {
+    color: $clickable-visited;
+  }
+}
+
+a[href^='http'] {
+  &::after {
+    content: '';
+    display: inline-block;
+    color: $clickable;
+    background-image: svg-uri('<svg width="28" height="28" stroke="none" fill="#345e83" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio"><path xmlns="http://www.w3.org/2000/svg" d="M0 0h24v24H0z" fill="none"></path><path xmlns="http://www.w3.org/2000/svg" d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg>');
+    width: 1em;
+    height: 1em;
+    background-size: cover;
+    background-position: bottom left;
+    margin-left: 0.25em;
+    position: relative;
+    top: 0.2em;
+  }
+}
+a[href^='https://www.youtube'] {
+  &::after {
+    display: none;
+  }
+}
