@@ -1,18 +1,21 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        design-to-dev-guide
-      </h1>
+  <main>
+    <article>
       <nuxt-content :document="page" />
-    </div>
-  </div>
+    </article>
+    <PageNav set="concepts" />
+  </main>
 </template>
 
 <script>
+import PageNav from '~/components/PageNav'
+
 export default {
+  components: {
+    PageNav
+  },
   async asyncData ({ $content }) {
-    const page = await $content('hello').fetch()
+    const page = await $content('responsive-design').fetch()
     return {
       page
     }

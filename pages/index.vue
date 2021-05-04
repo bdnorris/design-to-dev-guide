@@ -1,22 +1,14 @@
 <template>
-  <div>
-    <Nav />
-    <main class="container">
-      <article>
-        <nuxt-content :document="page" />
-      </article>
-      <aside>menu</aside>
-    </main>
-  </div>
+  <main>
+    <article>
+      <nuxt-content :document="page" />
+    </article>
+    <aside />
+  </main>
 </template>
 
 <script>
-import Nav from '~/components/Nav'
-
 export default {
-  components: {
-    Nav
-  },
   async asyncData ({ $content }) {
     const page = await $content('intro').fetch()
     return {

@@ -1,34 +1,25 @@
 <template>
   <nav>
     <ul>
-      <li>
-        <nuxt-link to="/">
-          Home
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="">
-          Home
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="">
-          Home
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="">
-          Home
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="">
-          Home
+      <li v-for="(item, index) in nav" :key="index">
+        <nuxt-link :to="'/' + item[0]">
+          {{ item[1] }}
         </nuxt-link>
       </li>
     </ul>
   </nav>
 </template>
+
+<script>
+export default {
+  name: 'Nav',
+  computed: {
+    nav () {
+      return this.$store.state.menus.root
+    }
+  }
+}
+</script>
 
 <style lang='scss'>
   nav {

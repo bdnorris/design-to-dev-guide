@@ -3,10 +3,10 @@ export const state = () => ({
     root: [
       ['', 'Home'],
       ['concepts', 'Concepts'],
-      ['concepts', 'Tips'],
-      ['concepts', 'Web Handoff'],
-      ['concepts', 'Email Handoff'],
-      ['concepts', 'Checklist']
+      ['tips', 'Tips'],
+      ['web-handoff', 'Web Handoff'],
+      ['email-handoff', 'Email Handoff'],
+      ['checklist', 'Checklist']
     ],
     tips: [
       ['tips', 'dos-and-donts', 'Dos and Don’ts'],
