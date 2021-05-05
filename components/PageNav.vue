@@ -1,13 +1,13 @@
 <template>
-  <article class="menu">
+  <aside class="menu">
     <ul>
       <li v-for="(item, index) in menuItems" :key="index">
-        <nuxt-link :to="'#' + item[1]">
+        <nuxt-link :to="'/' + item[0] + '/' + item[1]">
           {{ item[2] }}
         </nuxt-link>
       </li>
     </ul>
-  </article>
+  </aside>
 </template>
 
 <script>

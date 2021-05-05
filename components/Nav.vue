@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="main-nav">
     <ul>
       <li v-for="(item, index) in nav" :key="index">
         <nuxt-link :to="'/' + item[0]">
@@ -21,8 +21,8 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-  nav {
+<style lang="scss" scoped>
+  .main-nav {
     border-bottom: 1px solid $lgray;
     font-weight: 500;
     padding: 0 1em;
@@ -47,19 +47,30 @@ export default {
   li {
     display: block;
     float: left;
+    &:first-child {
+      .nuxt-link-active:not(.nuxt-link-exact-active) {
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 
-  [aria-current] {
+  [aria-current],
+  .nuxt-link-exact-active,
+  .nuxt-link-active {
     position: relative;
     display: inline-block;
   }
 
-  [aria-current]::after {
+  [aria-current]::after,
+  .nuxt-link-exact-active::after,
+  .nuxt-link-active::after {
     position: absolute;
     content: '';
     width: calc(100% - 1em);
     height: 2px;
-    background-color: $clickable;
+    background-color: $primary;
     display: block;
     bottom: -1px;
   }

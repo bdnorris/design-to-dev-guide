@@ -1,8 +1,5 @@
 <template>
   <main>
-    <article>
-      <nuxt-content :document="page" />
-    </article>
     <PageNav set="concepts" />
   </main>
 </template>
@@ -13,12 +10,6 @@ import PageNav from '~/components/PageNav'
 export default {
   components: {
     PageNav
-  },
-  async asyncData ({ $content }) {
-    const page = await $content('responsive-design').fetch()
-    return {
-      page
-    }
   }
 }
 </script>

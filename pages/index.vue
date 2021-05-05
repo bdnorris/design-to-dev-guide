@@ -43,4 +43,20 @@ export default {
       max-height: 80vh;
     }
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    a {
+      position: absolute;
+      left: -0.75em;
+      top: 0;
+      &::before {
+        content: '#';
+        color: $primary;
+        display: block;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
 </style>
