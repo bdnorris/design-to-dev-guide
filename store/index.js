@@ -24,7 +24,8 @@ export const state = () => ({
       ['concepts', 'clickability-affordance', 'Clickability & Affordance'],
       ['concepts', 'typography', 'Typography'],
       ['concepts', 'workflow', 'Workflow'],
-      ['concepts', 'forms', 'Forms']
+      ['concepts', 'forms', 'Forms'],
+      ['concepts', 'accessibility', 'Accessibility']
     ]
   }
 })

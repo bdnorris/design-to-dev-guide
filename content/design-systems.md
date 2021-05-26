@@ -103,16 +103,3 @@ You should research these patterns when designing your interfaces.
 
 ---
 
-# Styletiles
-
-One way to quickly iterate on the styles for a web project without having to complete full page designs too early.
-
-## Audience
-
-Although style tiles are great for communicating amongst a design and development team, the ultimate audience for them is the client. They’re meant to quickly get feedback and show possible directions.
-
-## Level of Detail
-
-Style tiles are general. They exist to communicate mood and the general design direction.
-
-[Styletiles](http://styletil.es/)
