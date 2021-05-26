@@ -59,4 +59,8 @@ export default {
       }
     }
   }
+
+  .nuxt-link-active {
+    
+  }
 </style>

@@ -13,8 +13,8 @@ export const state = () => ({
       ['tips', 'typography', 'Typography'],
       ['tips', 'layout', 'Layout'],
       ['tips', 'client', 'Client Review'],
-      ['tips', 'max-widths', 'Max-widths, Alignment, and Outer Margins'],
-      ['tips', 'images', 'Advanced Strategies for Images']
+      ['tips', 'images', 'Images'],
+      ['tips', 'navigation', 'Navigation and Wayfinding']
     ],
     concepts: [
       ['concepts', 'responsive-design', 'Responsive Design'],
