@@ -70,6 +70,24 @@ lorem
 
 ---
 
+### Think about the future
+
+Websites often have a life of 3-5 years, sometimes even longer. It can be painful to go back and make design adjustments later on, so you may have to live with your design decisions for a long time
+
+### Think about and define global styles,
+
+One way to avoid some of the pain of the long life of a site is to think about global styles and settings. If you have 100 different items on your site, and each has a different amount of whitespace between them, it’s a huge undertaking to later decide to increase or decrease that spacing. If you think globally, and define a base unit of whitespace (say, 20px), then changing that can globally adjust the whole site. If you want a little more space some places, it’s pretty trivial in code to say my-padding x 2 for twice the padding, or even my-padding x 1.5, or my-padding/2 for less space. Want less padding for the entire site, changing the global from 20px to 18px will tighten the whole site in one fell swoop.
+
+### Design components and templates not pages
+
+> Like cities, websites are complex systems. People visit them for different reasons. They navigate through them. They scan information. They make key purchasing decisions.
+
+> Meanwhile, internally, your different teams act within this same space.
+
+> A complex system that isn’t managed well breaks down and our customers can perceive that. When this happens, trust in the brand can go down, customer satisfaction suffers, or your audience will just go someplace else.
+
+[ClearLeft: Designing Design Systems](https://clearleft.com/posts/designing-design-systems)
+
 # Web Patterns
 
 The web shares a lot of principles with other graphic design disciplines, but there are also a lot of web-specific patterns and specifications people are used to, if you deviate, make sure you have a good reason.

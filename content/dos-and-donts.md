@@ -24,6 +24,15 @@ Design consistency...
 
 [User Experience: Insights Into Consistency in Design](https://blog.tubikstudio.com/design-consistency/)
 
+# Common UI Elements
+
+Get good at these
+
+Buttons
+Forms
+Navigation
+Search Boxes
+
 ### Provide a Favicon
 
 The little icon that shows in your browser tab... these can be a bit complex. There are other applications for this in different operating systems and browsers, so it's best to have a full range. 
