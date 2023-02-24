@@ -1,6 +1,237 @@
 # Accessibility
 
-crib from dev training. 
+# What does it mean to be "Accessible"?
+
+> Learning a new tool or framework is one thing, but rethinking who you are creating things for is quite another. It means accepting that you might have failed people in the past, and that’s equally challenging. 
+> — Heydon Pickering
+
+From a historical perspective, *the web is already accessible*. All HTML specifications and most browsers have no issues with accessibility. It is only through our enhancements of functionality and design that we break the accessibility of the websites we build.
+
+When a website isn't accessible, it is discrimination—we are leaving certain people out. An accessible website should provide the ability for all users to...
+
+- **perceive** and **understand** the content
+- **navigate** the site or application
+- and when applicable, **contribute**
+
+<Callout emoji="megaphone">
+	When we talk about UX, accessibility is included. If a website isn't accessible, it isn't usable.
+</Callout>
+
+Software is for people. Everyone should be able to use your website. But different users have different needs and abilities.
+
+[Access - A Short Film About Accessibility](https://accessmovie.org/)
+
+> Many an inclusive design conundrum stems from the tension between logical document structure, compelling visual layout, and intuitive interaction. Where we dispense with any one of these, someone somewhere will have a diminished experience. Compromise is inevitable, but it should be an equitable sort of compromise.
+> — Heydon Pickering
+
+### Nonprofits and Section 508
+
+Any nonprofits we work for may fall under Section 508, a set of accessibility standards for government websites and other computer resources that receive federal funding.
+
+[Section508.gov | GSA Government-wide IT Accessibility Program](https://section508.gov/)
+
+### Benefits
+
+But avoiding legal problems is just one of the benefits of making our sites more accessible.
+
+There is a significant amount of overlap between accessibility and search engine optimization. Screen readers and Google's crawlers are essentially both software charged with trying to understand the content of a website.
+
+It can encourage increased compatibility with more hardware and more device types, creating more robust and future-proof systems.
+
+Additionally, an accessible site is a well-crafted site, often with less cruft, leading to enhanced site performance.
+
+Finally, there's the relationship between accessibility and usability. Making a site more accessible for disabled users, tends to make it more useable for everyone.
+
+## Multimedia
+
+**Subtitles and/or captions** are often ideal for hearing impaired users. They are required for AA compliance. Ideally, they will be created with authoring tools built into third-party hosts like YouTube or Vimeo. If we are hosting the video and utilizing browser APIs, this article has information on creating and implementing subtitles or captions.
+
+[Adding captions and subtitles to HTML5 video](https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+
+**Transcripts** of audio or video presentations may be useful, but are only required for AAA compliance. They're useful for hearing, visual and cognitive disabilities and they allow multimedia to be indexed by search engines. They should be HTML, placed on the same page or clearly linked.
+
+**Audio descriptions** that use gaps in dialog to describe meaningful information about actions, characters, scene changes or on-screen text may also be required for AA compliance and are helpful when someone with visual impairments may still need to consume the audio portion of a video presentation. 
+
+## Audio should be optional
+
+The end-user should have control of any audio. A screen reader is hard to listen too over other audio playing in the browser. 
+
+[Understanding Success Criterion 1.4.2 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-dis-audio.html)
+
+<Callout emoji="alarm">
+Audio that plays automatically is a disaster for screen readers—imagine trying to find the mute button while the audio is playing.
+</Callout>
+
+## Background Videos
+
+The current trend of using background videos with content on top presents some unique challenges. By "Background Video" we mean a video that autoplays but has no audiotrack. WCAG does not have information very specific to this usage, but it's fairly clear that if movement lasts more than 5 seconds and starts automatically, you need to provide a mechanism to pause it. Here's some further resources on this topic:
+
+[Accessible HTML video as a background](http://www.punkchip.com/accessible-html-video-as-a-background/)
+
+[Best Practices for Background Videos | Viget](https://www.viget.com/articles/best-practices-for-background-videos/)
+
+[Accessibility rules for generic lifestyle background video with no audio as it relates to WCAG 1.2.5 Audio Description (Prerecorded)](https://stackoverflow.com/questions/59848343/accessibility-rules-for-generic-lifestyle-background-video-with-no-audio-as-it-r)
+
+## Typographic and UI Color Contrast
+
+WCAG AA Sites require a certain level of contrast between text and background colors. This is to ensure that users with visual impairments can read the content. The contrast ratio is calculated using the [WCAG Contrast Ratio Algorithm](https://www.w3.org/TR/WCAG20/#contrast-ratiodef).
+
+[Contrast Ratio Math and Related Visual Issues · Issue #695 · w3c/wcag](https://github.com/w3c/wcag/issues/695)
+
+The algorithm here is problematic.
+
+[The Myths of Color Contrast Accessibility](https://uxmovement.com/buttons/the-myths-of-color-contrast-accessibility/)
+
+These requirements are not just for type on a background, but also for any UI elements that are interactive. Buttons, cards, icons and other elements also need to have sufficient contrast.
+
+### Type Size and Weight
+
+Note that the size of the text matters for how much contrast is required. The larger the text, the less contrast is required.
+
+Large text is defined as 18pt or 14pt if the type is bold.
+
+### Tools
+
+There are a number of tools that could help you generate accessible color combinations.
+
+[WhoCanUse](https://www.whocanuse.com/?bg=886ec9&fg=ffffff&fs=16&fw=)
+
+[Geenes](https://geenes.app/)
+
+## Focus indicators
+
+Every element that can receive focus should be visible to the user. Typically you'll just use the browser defaults for visible focus, but these styles can be overwritten.
+
+Visibility is especially important for keyboard navigation, since without visibility, the user would not know what item is currently in focus. Often we have received feedback from the client that they would like this indicator removed. This is easily done, but should be avoided and is a good point to initiate client education.
+
+The following article is a little too enthusiastic about replacing default focus indicators, but has good advice nevertheless.
+
+[How To Design Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+
+The most important aspect is to push-back if a stakeholder wants to remove focus indicators. Chrome has removed them for click events, but they are still visible for keyboard navigation, which should hopefully cut down on these requests.
+
+## Forms and controls
+
+As the primary way users can input information into web applications, it's essential forms are accessible.
+
+As a designer, it's important to understand that form errors **will** occur and they should be designed appropriately.
+
+- Make sure errors do not only use color to indicate "required", "errors", etc.
+- **Form labels are required for every form control.**
+    - Either left or above the input, or to the right of checkboxes and radio buttons
+- Related inputs should be grouped together (to give context)
+    - Payment / Location / etc.
+- Error identification and suggestions
+    - Correcting errors in forms can be tough for sighted and unsighted users
+    - This can lead to form abandonment
+    - Errors result from validation.
+    - Errors
+        - Required
+        - Unexpected Input
+    - Error Recovery process
+        - Alert the user to the error
+        - Allow easy access to rectify fields or controls
+        - Enable revalidation and resubmission of the form
+        - To ensure accessibility
+            - Show errors at the top of the form
+            - AND Inline messaging
+        - Provide suggestions within the error message
+            - Correct formatting, etc.
+            - "Invalid" is not useful
+
+## Movement and animation
+
+Identifying movement and animation accessibility issues can be a bit subjective. But there's a few guidelines to keep in mind:
+
+- Automatic animation or movement longer than 5 seconds should have a pause or stop button
+    - Your CSS or JS animation should be done way faster than this.
+    - Avoid animated Gifs that loop, infinite is longer than 5 seconds
+- If informative, there should be a text alternative
+- Make sure you're allowing enough time to read and use content
+- Avoid seizures by making sure there are no more than 3 flashes per second
+
+It's recommended you look over the following materials to acquaint yourself with best practices for animations:
+
+[Designing Safer Web Animation For Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
+
+[Animations](https://accessibility.psu.edu/animations/)
+
+[More Resources for Accessible Animations](https://alistapart.com/blog/post/more-resources-for-accessible-animations/)
+
+[Designing For Accessibility And Inclusion - Smashing Magazine](https://www.smashingmagazine.com/2018/04/designing-accessibility-inclusion/#lens-animation-effects)
+
+[Accessible Web Animation: The WCAG on Animation Explained | CSS-Tricks](https://css-tricks.com/accessible-web-animation-the-wcag-on-animation-explained/)
+
+### Prefer Reduced Motion
+
+There's a potential solve for a lot of these issues, and that's the "Prefer Reduced Motion" setting in some operating systems.
+
+There is a media query available to us, that would allow us to turn off or limit animations, iteration count, smooth scrolling, etc. that we can control via CSS (and JS!).
+
+[prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+
+Support is good enough, so feel free to start using it.
+
+[Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/#search=prefer%20reduced%20motion)
+
+[Revisiting prefers-reduced-motion, the reduced motion media query | CSS-Tricks](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/)\
+
+## Images and other non-text elements
+
+### Alternative text
+
+Anyone with any familiarity with HTML probably knows about the importance of alternative or "alt" text. Using the `alt` attribute on your image tags is important for SEO and for accessibility.
+
+However, the context of the image may determine how alt text should be used, and it's worth looking into what proper alt text actually looks like for accessibility, rather than SEO.
+
+Make sure your CMS allows for alt text and implements it properly.
+
+Make sure content editors are providing alt text along with images.
+
+Alt text should be...
+
+- 125 characters or less per image (screen reader limitation)
+    - If it is too complex for this, it should be described by adjacent text.
+- Accurate and equivalent
+- Succinct
+- Non-redundant
+- Should not contain the words "image of" or "picture of" (screen reader will tell them it's a picture)
+
+Here are some further guidelines to help decide the proper use of alt text:
+
+- Should be used if image informative, or conveys meaning that is not included in the surrounding text.
+    - The *alt* attribute should be used to describe the image.
+- If it is not informative, but merely decorative, provide an **empty *alt* attribute**. (`<img src="image.jpg" alt="">`)
+- If it is already captioned, also provide an empty alt attribute.
+    - `<figure>` and `<caption>` elements are ideal for this and will be read properly by screen readers.
+
+### Complex images (infographics, graphs, etc.)
+
+- When 125 characters is not enough, a longer description must be given.
+- Should be provided on the page itself, or otherwise linked directly
+    - link should be adjacent to the image
+
+### Icons and other image-based controls
+
+- If it is an icon, logo, or an image representing text...
+    - Make sure it is labeled (labeling techniques will be discussed below)
+    - Alternatively, label the image the alt attribute with the exact text represented by the image.
+    - Ideally though, images representing text should be avoided.
+- If it is a link with no text link adjacent, the alt text should describe the **destination of the link**, not the image.
+- If it performs a function, the alt text should describe the **function**, not the image itself.
+
+
+[Stark's Public Library - Accessibility resources, guides, communities, and more](https://www.getstark.co/library/)
+
+[Accessibility Support](https://a11ysupport.io/)
+
+[Myths about Web Accessibility](https://alvaromontoro.com/blog/67989/myths-about-web-accessibility#accessibility-is-expensive)
+
+[Accessibility Myths](https://a11ymyths.com/)
+
+[How many people with disabilities use our site?](https://hidde.blog/how-many-people-with-disabilities-use-our-site/)
+
+[Overlay Fact Sheet](https://overlayfactsheet.com/)
 
 https://overlayfactsheet.com/
 
