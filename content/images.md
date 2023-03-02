@@ -1,4 +1,10 @@
-# Advanced Strategies for Images
+# Images
+
+## Formats
+
+- pull from my web 101 docs
+
+## Advanced Strategies for Images
 
 There are some new strategies available in the browser that might be helpful for you to know about.
 
