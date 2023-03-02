@@ -82,13 +82,11 @@ The algorithm here is problematic.
 
 [The Myths of Color Contrast Accessibility](https://uxmovement.com/buttons/the-myths-of-color-contrast-accessibility/)
 
-These requirements are not just for type on a background, but also for any UI elements that are interactive. Buttons, cards, icons and other elements also need to have sufficient contrast.
+These requirements are not just for type on a background, but also for any UI elements that are interactive. Buttons, cards, icons and other elements also need to have sufficient contrast. But even if it doesn't always make sense, these are requirements that we need to follow to ensure that our sites meet the WCAG AA standard.
 
 ### Type Size and Weight
 
-Note that the size of the text matters for how much contrast is required. The larger the text, the less contrast is required.
-
-Large text is defined as 18pt or 14pt if the type is bold.
+Note that the size of the text matters for how much contrast is required. The larger the text, the less contrast is required. Large text is defined as 18pt or 14pt if the type is bold. You can safely interchange pt and px in this case.
 
 ### Tools
 
@@ -123,18 +121,15 @@ As a designer, it's important to understand that form errors **will** occur and 
     - Payment / Location / etc.
 - Error identification and suggestions
     - Correcting errors in forms can be tough for sighted and unsighted users
-    - This can lead to form abandonment
-    - Errors result from validation.
     - Errors
         - Required
         - Unexpected Input
     - Error Recovery process
         - Alert the user to the error
         - Allow easy access to rectify fields or controls
-        - Enable revalidation and resubmission of the form
+        - Enable revalidation of the form
         - To ensure accessibility
-            - Show errors at the top of the form
-            - AND Inline messaging
+            - Show errors at the top of the form AND Inline messaging
         - Provide suggestions within the error message
             - Correct formatting, etc.
             - "Invalid" is not useful
@@ -150,7 +145,7 @@ Identifying movement and animation accessibility issues can be a bit subjective.
 - Make sure you're allowing enough time to read and use content
 - Avoid seizures by making sure there are no more than 3 flashes per second
 
-It's recommended you look over the following materials to acquaint yourself with best practices for animations:
+It's recommended you look over the following articles to acquaint yourself with best practices for animations:
 
 [Designing Safer Web Animation For Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 
@@ -166,13 +161,7 @@ It's recommended you look over the following materials to acquaint yourself with
 
 There's a potential solve for a lot of these issues, and that's the "Prefer Reduced Motion" setting in some operating systems.
 
-There is a media query available to us, that would allow us to turn off or limit animations, iteration count, smooth scrolling, etc. that we can control via CSS (and JS!).
-
-[prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
-
-Support is good enough, so feel free to start using it.
-
-[Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/#search=prefer%20reduced%20motion)
+There is a media query available to us, that would allow us to turn off or limit animations, iteration count, smooth scrolling, etc. that we can control in the development process.
 
 [Revisiting prefers-reduced-motion, the reduced motion media query | CSS-Tricks](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/)\
 
@@ -183,8 +172,6 @@ Support is good enough, so feel free to start using it.
 Anyone with any familiarity with HTML probably knows about the importance of alternative or "alt" text. Using the `alt` attribute on your image tags is important for SEO and for accessibility.
 
 However, the context of the image may determine how alt text should be used, and it's worth looking into what proper alt text actually looks like for accessibility, rather than SEO.
-
-Make sure your CMS allows for alt text and implements it properly.
 
 Make sure content editors are providing alt text along with images.
 
@@ -202,8 +189,7 @@ Here are some further guidelines to help decide the proper use of alt text:
 - Should be used if image informative, or conveys meaning that is not included in the surrounding text.
     - The *alt* attribute should be used to describe the image.
 - If it is not informative, but merely decorative, provide an **empty *alt* attribute**. (`<img src="image.jpg" alt="">`)
-- If it is already captioned, also provide an empty alt attribute.
-    - `<figure>` and `<caption>` elements are ideal for this and will be read properly by screen readers.
+- If it is already captioned by nearby text, also provide an empty alt attribute. There is no use in being redundant.
 
 ### Complex images (infographics, graphs, etc.)
 
@@ -232,7 +218,3 @@ Here are some further guidelines to help decide the proper use of alt text:
 [How many people with disabilities use our site?](https://hidde.blog/how-many-people-with-disabilities-use-our-site/)
 
 [Overlay Fact Sheet](https://overlayfactsheet.com/)
-
-https://overlayfactsheet.com/
-
-https://uxmovement.com/buttons/the-myths-of-color-contrast-accessibility/

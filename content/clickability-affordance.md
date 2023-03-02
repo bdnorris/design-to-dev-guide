@@ -70,10 +70,6 @@ Not only do users need clear links, but search engine crawlers (Google) use the 
 
 Although there are a few definitions and the term has morphed a bit over the years, what I mean by "affordance" describes the discoverability of actions through hints given to you by the interface's design.
 
-<!-- ## Signifiers
-
-Don Norman, the author of "The Design of Everyday Things", prefers the term _Signifiers_. In various ways, characteristics of an object suggest to the individual what actions are possible. Signifiers are the “perceivable parts of an affordance”. Again using the door knob example, its roundness signifies that it affords twisting.  -->
-
 ### Metaphors
 
 It's extremely common, and useful, to use icons in interface design to create a real-world metaphor of the behavior. Gears for "settings", wrenches for "tools", and a disk for "save" are common examples. However, metaphors can also be misunderstood, and sometimes there just isn't a good analog for that particular action.
