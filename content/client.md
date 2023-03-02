@@ -12,9 +12,13 @@ Why?
 	- If not, the developer can point out where the design needs to be simplified or where the timeline needs to be extended.
 - The developer can also point out where the design is not responsive or where it may be difficult to implement responsiveness.
 - The developer can point out where the design is not accessible or where it may be difficult to implement accessibility.
-- The developer can also put together a list of requirements that are still missing or unclear, and otherwise help with questions that still need to be asked.
+- The developer can also put together a list of requirements that are still missing or unclear, and otherwise help with questions that still need to be asked.'
+
+## Review Method
 
 It's extremely important that the client view the mock-ups properly. Client's often do not have the same type of hardware as designers and likely have smaller or less pixel-dense screens. Make sure they are viewing the design at 100% zoom and on the same type of device they will be using to view the final product.
+
+For Adobe XD Links, make sure the client is setting the view to 100% zoom. 
 
 ## Browsers
 
