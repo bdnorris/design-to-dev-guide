@@ -15,7 +15,7 @@
     "@nuxt/content": "^1.0.0",
     "core-js": "^3.29.0",
     "nuxt": "^3.2.3",
-    "vue": "^2.7.10",
+    "vue": "^3.2.47",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
     "@nuxtjs/style-resources": "^1.0.0",
