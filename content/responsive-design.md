@@ -61,34 +61,6 @@ Now what about the backgrounds, do they keep getting larger, do they stop growin
 
 You can find [more information about how to deal with backgrounds in the Tips section](/tips/max-widths).
 
-## What&#39;s a Pixel?
-
-What should ultimately be the simplest unit, is actually a bit complicated. The good news is, we mostly just have to worry about what are called &quot;Reference Pixels&quot; or &quot;CSS Pixels&quot;. I&#39;ll quote from a Smashing magazine article to explain these a bit.
-
-[Towards a Retina Web](https://www.smashingmagazine.com/2012/08/towards-retina-web/)
-
-### Device Pixels (real screens)
-
-> A **device pixel** (or physical pixel) is the tiniest physical unit _in a display_. Each and every pixel sets its own color and brightness as instructed by the operating system, while the imperceptible distance between these tiny dots takes care of tricking the eye into perceiving the full image.
-
-> **Screen density** refers to the number of device pixels on a physical surface. It is often measured in pixels per inch (PPI). Apple has coined the marketing term “Retina” for its double-density displays, claiming that the human eye can no longer distinguish individual pixels on the screen from a “natural” viewing distance.
-
-### CSS/Reference/Device-Independent Pixels (sizing in the browser)
-
-> A **CSS pixel** is an abstract unit used by browsers to precisely and consistently draw content on Web pages. Generically, CSS pixels are referred to as device-independent pixels (DIPs). On standard-density displays, 1 CSS pixel corresponds to 1 device pixel.
-
-### Bitmap Pixels (image)
-
-> **bitmap pixel** is the smallest unit of data in a raster image (PNG, JPG, GIF, etc). Each pixel contains information on how it is to be displayed, including its position in the image’s coordinate system and its color. Some image formats can store additional per-pixel data, such as opacity (which is the alpha channel).
-
-> Beside its raster resolution, an image on the Web has an abstract size, defined in CSS pixels. The browser squeezes or stretches the image based on its CSS height or width during the rendering process.
-
-> When a raster image is displayed at full size on a standard-density display, 1 bitmap pixel corresponds to 1 device pixel, resulting in a full-fidelity representation. Because a bitmap pixel can’t be further divided, it gets multiplied by four on Retina displays to preserve the same physical size of the image, losing detail along the way.
-
-### Sorry about that
-
-...but the above will become very important when we start talking about retina graphics.
-
 ## Pixels vs Percentages
 
 One thing that&#39;s really hard to communicate from design to development, as previously mentioned, is whether a particular thing should be adaptive or responsive, that is, should it be sized in pixels and then change at a breakpoint, or should it be designed at a percentage.
@@ -97,7 +69,7 @@ Percentage based designs are typically more flexible and will look better for a 
 
 ## Time for mobile-first design
 
-Even our B2B clients are near 40% mobile usage. What does this mean? You are encouraged to, if not design mobile-first, then produce your wireframes mobile-first.
+Even our B2B clients are near 40-50% mobile usage. What does this mean? You are encouraged to, if not design mobile-first, then produce your wireframes mobile-first.
 
 Designing mobile-first means you must consider your content and hierarchy very carefully. You will only be able to show the most pertinent and useful information and actions to your users. You can always enhance your design as screens get larger, adding more and larger graphics, but you'll do so knowing your content has accomplished its primary goals.
 
