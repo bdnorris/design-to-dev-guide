@@ -39,11 +39,6 @@ There's tremendous value of prototyping interactive designs prior to full develo
 
 There are several levels of prototyping, each taking up a different amounts of time and effort (\$\$\$). Choosing the right one depends on the complexity, size and importance of the project.
 
-- In app prototyping: Next generation digital design tools like XD and Sketch have a certain amount of prototyping built in. These tools are getting better and better and will continue to improve. The mostly allow navigation through a design via click points that move you from artboard to artboard (page/view to page/view), but there is also a certain amount of interactivity that can be added by creating different "states" on a component. These can sometimes include animation.
-- Quick code prototypes: Sometimes it just makes sense to start coding. These prototypes can use mock data, skipping actual complicated back-end functionality. The goal is to get coding with a lower-fidelity design to test interactivity instead of worrying about details.
-
-For a typical website, the first one is usually sufficient. Code prototypes are often only necessary with more complicated tools (filters, quizes/wizards, calculators)
-
 Prototyping can take a lot of different forms, but here's where we are making things that are actually interactive but have a similar incompleteness to a wireframe. The design probably isn't all the way thought out yet, and you're not even sure which pattern to use or abuse.
 
 ### Types
@@ -65,7 +60,8 @@ Prototyping can take a lot of different forms, but here's where we are making th
 
 Prototyping and wireframes can lead to a more iterative approach design problems.
 
-// CHAT GPT
+Linear Workflow: Sitemap > Wireframe > Prototype > Copy > Design > Develop
+Iterative: Sitemap > Wireframe/Copy/Prototype/Design, repeat.
 
 An iterative design process is a cyclical approach to designing a product, service, or system, where the design is refined through repeated cycles of prototyping, testing, and feedback. This approach involves breaking down the design process into small, manageable steps, with each step building on the knowledge gained from the previous step.
 
@@ -85,17 +81,6 @@ Implementation: Once the design has been refined and tested to the satisfaction 
 
 Evaluation: After implementation, the design is evaluated to determine its effectiveness and identify areas for improvement. This feedback is then used to inform future iterations of the design process.
 
-Overall, an iterative design process involves a continuous cycle of prototyping, testing, and refining, with each iteration building on the knowledge gained from previous iterations. The process is flexible and adaptable, allowing designers to make changes and improvements as they learn more about the needs and preferences of users or customers.
-
-/////
-
-Linear Workflow: Sitemap > Wireframe > Prototype > Copy > Design > Develop
-Iterative: Sitemap > Wireframe/Copy/Prototype/Design, repeat.
-
-Responsive Deliverables
-Element Collages
-Atomic Web Design
-For larger projects, think beyond layouts and pages, think about modular and systems (design as legos).
 
 ### Resiliency
 
@@ -122,6 +107,11 @@ Prototype for all items that have a state, if you can’t design, **document.**
   - Display toggles
   - Data updates
     - Wait times and loading states (what appears when there is a delay in updating the page?)
+
+## Atomic Web Design
+
+For larger projects, think beyond layouts and pages, think about modular and systems (design as legos).
+
 
 ## Animation
 
