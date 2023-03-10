@@ -150,6 +150,15 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] },
 },
+"intro": {
+"intro.md": {
+  id: "intro.md",
+  slug: "intro",
+  body: string,
+  collection: "intro",
+  data: any
+} & { render(): Render[".md"] },
+},
 "tips": {
 "digital-assets.md": {
   id: "digital-assets.md",

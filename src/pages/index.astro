@@ -2,16 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 
 import { getCollection, getEntryBySlug } from 'astro:content';
-const allConcepts = await getCollection('concepts');
-const intro = await Astro.glob('../content/intro.md');
+const intro = await getCollection('intro');
+const { Content } = await intro[0].render();
 ---
 
 <Layout title="Design to Dev Guide">
 	<main>
-		{intro.map(introEntry => (
+		<!-- {intro.map(introEntry => ( -->
 			<div>
-				<introEntry.Content />			
+				<Content />
 			</div>
-		))}
+		<!-- ))} -->
 	</main>
 </Layout>
