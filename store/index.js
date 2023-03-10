@@ -13,8 +13,8 @@ export const state = () => ({
       ['tips', 'layout', 'Layout'],
       ['tips', 'client', 'Client Review'],
       ['tips', 'images', 'Images'],
-      ['tips', 'navigation', 'Navigation and Wayfinding'],
-      ['tips', 'digital-assets', 'Digital Assets']
+      ['tips', 'digital-assets', 'Digital Assets'],
+      ['tips', 'navigation', 'Navigation and Wayfinding']
     ],
     concepts: [
       ['concepts', 'responsive-design', 'Responsive Design'],
@@ -22,6 +22,7 @@ export const state = () => ({
       ['concepts', 'clickability-affordance', 'Clickability & Affordance'],
       ['concepts', 'typography', 'Typography'],
       ['concepts', 'workflow', 'Workflow'],
+      ['concepts', 'animation', 'Animation'],
       ['concepts', 'forms', 'Forms'],
       ['concepts', 'accessibility', 'Accessibility']
     ]
