@@ -1,13 +1,5 @@
 export const state = () => ({
   menus: {
-    root: [
-      ['', 'Home'],
-      ['concepts', 'Concepts'],
-      ['tips', 'Tips'],
-      ['web-handoff', 'Web Handoff'],
-      ['email-handoff', 'Email Handoff'],
-      ['checklist', 'Checklist']
-    ],
     tips: [
       ['tips', 'dos-and-donts', 'Dos and Don’ts'],
       ['tips', 'layout', 'Layout'],

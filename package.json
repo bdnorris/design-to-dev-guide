@@ -1,35 +1,19 @@
 {
-  "name": "design-to-dev-guide",
-  "version": "1.0.0",
-  "private": true,
+  "name": "astro-test",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
-    "lintfix": "yarn lint:js --fix"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@nuxt/content": "^2.5.2",
-    "@nuxtjs/style-resources": "^1.2.1",
-    "core-js": "^3.29.0",
-    "node-sass": "^8.0.0",
-    "nuxt": "^3.2.3",
+    "@astrojs/mdx": "^0.18.0",
+    "@astrojs/vue": "^2.1.0",
+    "astro": "^2.0.18",
     "sass": "^1.58.3",
-    "sass-loader": "^13.2.0",
-    "vue": "^3.2.47",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
-  },
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1",
-    "@nuxtjs/eslint-config": "^12.0.0",
-    "@nuxtjs/eslint-module": "^4.0.1",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.35.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-vue": "^9.5.1"
+    "vue": "^3.2.47"
   }
 }
