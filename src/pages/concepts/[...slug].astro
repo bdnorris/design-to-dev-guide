@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 // 2. When it's time to render, you can get the entry directly from the prop
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const conceptCollection = await getCollection('concepts');
 ---
 
 <Layout title="Design to Dev Guide">
@@ -20,5 +21,12 @@ const { Content } = await entry.render();
       <Content />
     </article>
     <!-- <PageNav set="concepts" /> -->
+    <ul>
+			{conceptCollection.map(conceptEntry => (
+				<li>
+					<a href={`/concepts/${conceptEntry.slug}`}>{conceptEntry.data.title}</a>
+				</li>
+			))}
+		</ul>
   </main>
 </Layout>

@@ -1,5 +1,5 @@
 ---
-title: "Dos and Don'ts"
+title: Dos and Don'ts
 ---
 
 # Dos and Don’ts
