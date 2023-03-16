@@ -19,9 +19,7 @@ export default {
         ['', 'Home'],
         ['concepts', 'Concepts'],
         ['tips', 'Tips'],
-        ['web-handoff', 'Web Handoff'],
-        ['email-handoff', 'Email Handoff'],
-        ['checklist', 'Checklist']
+        ['checklists', 'Checklists']
       ],
     };
   },

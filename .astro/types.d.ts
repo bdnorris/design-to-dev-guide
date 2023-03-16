@@ -121,13 +121,6 @@ declare module 'astro:content' {
   collection: "concepts",
   data: any
 } & { render(): Render[".md"] },
-"layout.md": {
-  id: "layout.md",
-  slug: "layout",
-  body: string,
-  collection: "concepts",
-  data: any
-} & { render(): Render[".md"] },
 "responsive-design.md": {
   id: "responsive-design.md",
   slug: "responsive-design",
@@ -184,6 +177,13 @@ declare module 'astro:content' {
 "images.md": {
   id: "images.md",
   slug: "images",
+  body: string,
+  collection: "tips",
+  data: any
+} & { render(): Render[".md"] },
+"layout.md": {
+  id: "layout.md",
+  slug: "layout",
   body: string,
   collection: "tips",
   data: any
