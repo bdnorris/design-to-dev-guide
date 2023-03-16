@@ -1,5 +1,6 @@
 ---
 title: Animation
+order: 7
 ---
 
 # Animation

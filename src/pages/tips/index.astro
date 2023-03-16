@@ -3,12 +3,15 @@ import Layout from '../../layouts/Layout.astro';
 
 import { getCollection } from 'astro:content';
 const tipsCollection = await getCollection('tips');
+const sortedTips = tipsCollection.sort((a, b) => {
+	return a.data.order - b.data.order;
+});
 ---
 
 <Layout title="Design to Dev Guide">
 	<main>
 		<ul>
-			{tipsCollection.map(tipsEntry => (
+			{sortedTips.map(tipsEntry => (
 				<li>
 					<a href={`/tips/${tipsEntry.slug}`}>{tipsEntry.data.title}</a>
 				</li>

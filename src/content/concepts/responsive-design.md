@@ -1,5 +1,6 @@
 ---
 title: Responsive Design
+order: 1
 ---
 
 # Responsive Design

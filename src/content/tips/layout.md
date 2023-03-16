@@ -1,5 +1,6 @@
 ---
 title: Layout
+order: 1
 ---
 
 # Layout Tips

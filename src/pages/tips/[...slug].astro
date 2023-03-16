@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const tipsCollection = await getCollection('tips');
+const sortedTips = tipsCollection.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout title="Design to Dev Guide">
@@ -21,7 +22,7 @@ const tipsCollection = await getCollection('tips');
       <Content />
     </article>
     <ul>
-      {tipsCollection.map(tipsEntry => (
+      {sortedTips.map(tipsEntry => (
         <li>
           <a href={`/tips/${tipsEntry.slug}`}>{tipsEntry.data.title}</a>
         </li>

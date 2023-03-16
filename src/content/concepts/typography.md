@@ -1,5 +1,6 @@
 ---
 title: Typography
+order: 3
 ---
 
 # Typography

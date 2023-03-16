@@ -1,5 +1,6 @@
 ---
 title: Performance
+order: 7
 ---
 
 # Performance

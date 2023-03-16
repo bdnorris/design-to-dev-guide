@@ -1,5 +1,6 @@
 ---
 title: Digital Assets
+order: 4
 ---
 
 # Digital Assets

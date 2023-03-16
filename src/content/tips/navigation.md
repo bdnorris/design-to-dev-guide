@@ -1,5 +1,6 @@
 ---
 title: Navigation
+order: 2
 ---
 
 # Navigation

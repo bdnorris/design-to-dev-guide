@@ -2,13 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 
 import { getCollection } from 'astro:content';
-const allConcepts = await getCollection('concepts');
+const allConcepts = await getCollection('concepts')
+const sortedConcepts = allConcepts.sort((a, b) => a.data.order - b.data.order)
 ---
 
 <Layout title="Design to Dev Guide">
 	<main>
 		<ul>
-			{allConcepts.map(conceptEntry => (
+			{sortedConcepts.map(conceptEntry => (
 				<li>
 					<a href={`/concepts/${conceptEntry.slug}`}>{conceptEntry.data.title}</a>
 				</li>
