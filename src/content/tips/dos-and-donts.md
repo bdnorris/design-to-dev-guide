@@ -29,7 +29,9 @@ Design consistency...
 
 [User Experience: Insights Into Consistency in Design](https://blog.tubikstudio.com/design-consistency/)
 
-# Common UI Elements
+---
+
+## Common UI Elements
 
 Get good at these
 

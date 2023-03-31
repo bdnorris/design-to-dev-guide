@@ -10,7 +10,7 @@ const sortedTips = tipsCollection.sort((a, b) => {
 
 <Layout title="Design to Dev Guide">
 	<main>
-		<ul>
+		<ul class="page-nav">
 			{sortedTips.map(tipsEntry => (
 				<li>
 					<a href={`/tips/${tipsEntry.slug}`}>{tipsEntry.data.title}</a>

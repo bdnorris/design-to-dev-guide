@@ -14,7 +14,6 @@ Animation in the browser can take several different forms.
 - CSS: CSS animations and transitions are the most performant, but they are limited to basic transformations and timing functions. Interactivity is limited.
 - JS Web Animation API: This is a new API that is essentially a wrapper around CSS animations and transitions. It's a bit more flexible, but still limited to basic transformations. However, timing can be more complex, and more interactivity can be added. 
 - JS Libraries: There are a number of JS libraries that can be used to create more complex animations and their capabilities will vary. We often use [GSAP](https://greensock.com), but there are others.
-- ????????
 
 Animista is the best site to find some nice CSS animation styles you can find, tweak and then export code. All of these implementations have pretty good performance.
 
@@ -51,3 +50,12 @@ So let's discuss it early.
 _Transforms_ and _opacity_ are the most performant animations. You know what opacity is, but what can we "transform"? Here's a start:
 
 [transform - CSS Reference](https://cssreference.io/property/transform/)
+
+[transform playground](https://westciv.com/tools/3Dtransforms/index.html)
+
+## Libraries and Examples
+
+[Awesome Web Animation List](https://project-awesome.org/sergey-pimenov/awesome-web-animation)
+
+[Vivus](https://maxwellito.github.io/vivus/)
+

@@ -9,19 +9,15 @@
 	ul {
 		display: flex;
 		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			&::before {
+				display: none;
+			}
+		}
 	}
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-}
-
-/* clearfix */
-ul::after {
-	content: "";
-	display: block;
-	clear: both;
 }
 
 li {
@@ -79,6 +75,15 @@ nav a {
 		&.index {
 			padding-left: 0;
 			padding-right: 0;
+		}
+	}
+}
+
+ul.page-nav {
+	list-style: none;
+	li {
+		&::before {
+			display: none;
 		}
 	}
 }

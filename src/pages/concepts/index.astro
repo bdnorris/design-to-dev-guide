@@ -8,7 +8,7 @@ const sortedConcepts = allConcepts.sort((a, b) => a.data.order - b.data.order)
 
 <Layout title="Design to Dev Guide">
 	<main>
-		<ul>
+		<ul class="page-nav">
 			{sortedConcepts.map(conceptEntry => (
 				<li>
 					<a href={`/concepts/${conceptEntry.slug}`}>{conceptEntry.data.title}</a>

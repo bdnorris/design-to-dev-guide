@@ -36,8 +36,6 @@ More to the point, _not_ having some sort of system or guide can cause lots of p
 - [Website Style Guide Resources](http://styleguides.io/)
 - [ClearLeft: Designing Design Systems](https://clearleft.com/posts/designing-design-systems)
 
----
-
 # Atomic Design and Components
 
 Brad Frost is the designer/developer responsible for a lot of the growth, high-level thinking, and advocacy on the subject of component based design. He has a free book you should read. It&#39;s not that long!
@@ -66,7 +64,23 @@ Components can also have "responsive resize" settings applied, allowing you to r
 
 ## Component Variation
 
-lorem
+### Un-intended variation
+
+When designing a component, the design often starts with an idealized version of the content that goes into it. But when put into practice, the content might vary quite a bit, necessitating changes to the design or layout. 
+
+Handling those variations is not necessarily straight forward, but anticipating them and designing for them will lead to a more resilient website. 
+
+A button is a good example of a component that can have a lot of variation. You may have the "primary" button style, but then you also need a "secondary" button style. This is fairly straight foward and can be anticipated and designed for easily. 
+
+But what about a really long button, do you allow your buttons to have two lines of text? Does it break the style if this happens?
+
+What about a "card" component? What if all the aspects of the card are not available? Do you establish requirements of the minimum and maximum amount of content, or will the design still work if something is missing. 
+
+### Intended variation
+
+Sometimes you want to create a component that has a lot of variation. A good example of this is a "hero" component. You may want to have a hero component that has a background image, but you also want to have a hero component that has a video background.
+
+Being intentional in designing for these, but also presenting those variations to the developer and the client is important. Make sure stakeholders are aware of the variations have clarity around their use. This will allow the developer to create a component that is flexible enough to handle the variations, but also not so flexible that it deviates from your design intentions.
 
 ## How to:
 
@@ -105,6 +119,5 @@ You should research these patterns when designing your interfaces.
 
 - [UI Patterns](http://ui-patterns.com/)
 - [Inclusive Components](https://inclusive-components.design/)
-
----
+- [The Component Gallery](https://component.gallery/)
 

@@ -21,7 +21,7 @@ const sortedTips = tipsCollection.sort((a, b) => a.data.order - b.data.order);
     <article>
       <Content />
     </article>
-    <ul>
+    <ul class="page-nav">
       {sortedTips.map(tipsEntry => (
         <li>
           <a href={`/tips/${tipsEntry.slug}`}>{tipsEntry.data.title}</a>

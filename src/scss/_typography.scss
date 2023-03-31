@@ -63,3 +63,32 @@ a[href^='https://www.youtube'] {
     display: none;
   }
 }
+
+ul, ol {
+  list-style: circle;
+  padding-left: 0;
+  li {
+    &::before {
+      content: '•';
+      display: inline-block;
+      margin-right: 0.333em;
+    }
+  }
+  ul {
+    padding-left: 1em;
+  }
+}
+
+ol {
+  list-style: decimal;
+  li {
+    counter-increment: item;
+    padding-left: 1em;
+    &::before {
+      content: counter(item) '.';
+      // counter-increment: item;
+      margin-right: 0.333em;
+      margin-left: -1em;
+    }
+  }
+}

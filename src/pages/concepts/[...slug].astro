@@ -22,7 +22,7 @@ const sortedConcepts = conceptCollection.sort((a, b) => a.data.order - b.data.or
       <Content />
     </article>
     <!-- <PageNav set="concepts" /> -->
-    <ul>
+    <ul class="page-nav">
 			{sortedConcepts.map(conceptEntry => (
 				<li>
 					<a href={`/concepts/${conceptEntry.slug}`}>{conceptEntry.data.title}</a>

@@ -21,14 +21,19 @@ Single line text entry. This also includes special inputs for email addresses, t
 
 <label for="text-ex">Text</label>
 <input type="text" id="text-ex">
+
+### Password
+
 <label for="pw-ex">Password</label>
 <input type="password" id="pw-ex">
+
 
 ### Text Areas
 
 Muli-line text entry.
+
 <label for="ta-ex">Text Area</label>
-<textarea id="ta-ex" />
+<textarea id="ta-ex"></textarea>
 
 ### Number
 
