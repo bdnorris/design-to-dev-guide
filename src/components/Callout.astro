@@ -1,0 +1,33 @@
+---
+const { emoji } = Astro.props
+---
+  <div class="callout">
+    <div class="callout__icon">
+      { emoji === 'megaphone' ? '📣' : '' }
+      { emoji === 'fire' ? '🔥' : '' }
+      { emoji === 'alarm' ? '🚨' : '' }
+    </div>
+    <p>
+      <slot></slot>
+    </p>
+  </div>
+
+
+<style lang="scss">
+.callout {
+  background-color: lighten(hsla(27, 97%, 74%, 1), 22%);
+  padding: 0.75em 0.75em 0.8em 1em;
+  border: 1px solid darken(hsla(200, 22%, 92%, 1), 10%);
+  border-color: hsla(27, 97%, 74%, 1);
+  font-size: 1.2em;
+  line-height: 1.2;
+  display: flex;
+  align-items: baseline;
+  p {
+    margin: 0;
+  }
+}
+.callout__icon {
+  padding-right: 0.75em;
+}
+</style>
