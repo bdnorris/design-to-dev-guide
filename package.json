@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.18.2",
+    "@astrojs/mdx": "^0.18.3",
     "@astrojs/vue": "^2.1.0",
     "astro": "^2.1.9",
     "sass": "^1.60.0",
